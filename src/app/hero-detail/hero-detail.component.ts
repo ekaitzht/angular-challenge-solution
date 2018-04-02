@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component,EventEmitter, OnInit,Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-hero-detail',
@@ -7,10 +7,14 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero: any;
-
+  @Output() onRemoved = new EventEmitter<Number>();
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  clickRemoveButton(){
+    this.onRemoved.emit(this.hero.id);
+  }
 }
