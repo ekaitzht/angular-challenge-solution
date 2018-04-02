@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'app';
   heroes = HEROES;
   numberHeroes = this.heroes.length
+  selectedHero: any;
 
 
   onRemoved(id:Number){
@@ -18,4 +19,11 @@ export class AppComponent {
       return id !== hero.id
     })
   }
+  onSelect(hero:any): void {
+    this.selectedHero = hero;
+  }
 }
+
+
+
+
