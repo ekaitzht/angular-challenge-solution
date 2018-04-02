@@ -20,7 +20,5 @@ export class HeroDetailComponent implements OnInit {
     this.onRemoved.emit(this.hero.id);
   }
 
-  onSelect(hero:any): void {
-    this.selectedHero = hero;
-  }
+
 }

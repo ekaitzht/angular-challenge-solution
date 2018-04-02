@@ -19,6 +19,10 @@ export class AppComponent {
     })
   }
 
+  onSelect(hero:any): void {
+    this.selectedHero = hero;
+  }
+
 }
 
 

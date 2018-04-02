@@ -1,6 +1,6 @@
 <h2>We have {{heroes?.length}} heroes now:</h2>
 <ul>
-    <div *ngFor="let hero of heroes">
+    <div *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
         <app-hero-detail [hero]="hero" (onRemoved)="onRemoved($event)"  ></app-hero-detail>
     </div>
 </ul>
