@@ -8,6 +8,8 @@ import { Component,EventEmitter, OnInit,Input, Output} from '@angular/core';
 export class HeroDetailComponent implements OnInit {
   @Input() hero: any;
   @Output() onRemoved = new EventEmitter<Number>();
+  selectedHero: any;
+
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +18,9 @@ export class HeroDetailComponent implements OnInit {
 
   clickRemoveButton(){
     this.onRemoved.emit(this.hero.id);
+  }
+
+  onSelect(hero:any): void {
+    this.selectedHero = hero;
   }
 }

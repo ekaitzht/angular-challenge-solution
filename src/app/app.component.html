@@ -1,8 +1,8 @@
 <h2>We have {{heroes?.length}} heroes now:</h2>
 <ul>
-  <li *ngFor="let hero of heroes">
-  <app-hero-detail [hero]="hero" (onRemoved)="onRemoved($event)"  (click)="onSelect(hero)"></app-hero-detail>
-  </li>
+    <div *ngFor="let hero of heroes">
+        <app-hero-detail [hero]="hero" (onRemoved)="onRemoved($event)"  ></app-hero-detail>
+    </div>
 </ul>
 
 <div *ngIf="selectedHero">
